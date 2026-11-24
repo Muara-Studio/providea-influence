@@ -9,15 +9,19 @@
     <meta name="description" content="Providea Influence: katalog KOL, ticket campaign, MoU, dan invoice di satu tempat. Demo." />
     <title>Providea Influence</title>
     <script>
-      /* Theme before first paint, so dark mode never flashes white. Mirrors store/session.theme. */
+      /* Theme before first paint, so dark mode never flashes white. Mirrors store/session.theme:
+         a saved light/dark wins, a saved 'system' follows the OS, and a first visit is dark (the default). */
       try {
         var s = JSON.parse(localStorage.getItem('pi-demo') || 'null');
         var t = s && s.state && s.state.session && s.state.session.theme;
         if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
-      } catch (e) {}
+        else if (!t) document.documentElement.dataset.theme = 'dark';
+      } catch (e) {
+        document.documentElement.dataset.theme = 'dark';
+      }
     </script>
-    <script type="module" crossorigin src="./assets/index-CcsfzQoB.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/ui-DBcVE7DT.js">
+    <script type="module" crossorigin src="./assets/index-DO8f-Gdy.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/ui-BhR_tGO-.js">
     <link rel="stylesheet" crossorigin href="./assets/index-JzAaGcS-.css">
   </head>
   <body>
